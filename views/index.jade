@@ -8,11 +8,8 @@ block content
     form.form-signin(role="form")
         h2.form-signin-heading Please sign in
         input.form-control(type="email",placeholder="Email address",required autofocus)
-        input.form-control(type="password", placeholder="Password", required)
-        .checkbox
-            label
-                input(type="checkbox", value="remember-me") 
-                | Remember me
+        h1.form-signin-heading Name:
+        input.form-control(type="text", ng-model="yourName", placeholder="Enter a name here")
+        h1.form-signin-heading Hello {{yourName}}!
         button.btn.btn-lg.btn-primary.btn-block(type="submit")
             | Sign in
-
