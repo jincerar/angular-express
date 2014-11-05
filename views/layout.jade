@@ -1,7 +1,18 @@
 doctype html
-html
+html(ng-app)
   head
     title= title
+    meta(charset="utf-8")
+
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+
     link(rel='stylesheet', href='/stylesheets/style.css')
+
+    link(rel='stylesheet', href='vendor/bootstrap/dist/css/bootstrap.min.css')
+
+    link(rel='stylesheet', href='vendor/bootstrap/dist/css/sign.css')
+
+    script(src="vendor/angular/angular.min.js")
+    
   body
     block content
