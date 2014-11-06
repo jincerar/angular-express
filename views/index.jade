@@ -4,12 +4,16 @@ block content
   h1= title
   p Welcome to #{title}
 
-  .container
-    form.form-signin(role="form")
-        h2.form-signin-heading Please sign in
-        input.form-control(type="email",placeholder="Email address",required autofocus)
-        h1.form-signin-heading Name:
-        input.form-control(type="text", ng-model="yourName", placeholder="Enter a name here")
-        h1.form-signin-heading Hello {{yourName}}!
-        button.btn.btn-lg.btn-primary.btn-block(type="submit")
-            | Sign in
+
+ 
+    h2 Todooooooo
+    div(ng-controller="TodoController")
+      p {{remaining()}} of {{todos.length}} remaining 
+      ul.unstyled
+        li(ng-repeat="todo in todos")
+          input(type="checkbox", ng-model="todo.done")
+          span.done-{{todo.done}} {{todo.text}}
+      form(ng-submit="addTodo()")
+        input(type="text", ng-model="todoText", size="30", placeholder="add new todo here")
+        input.btn-primary(type="submit" value="add")
+

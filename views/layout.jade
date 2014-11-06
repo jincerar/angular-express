@@ -1,5 +1,5 @@
 doctype html
-html(ng-app)
+html(ng-app="todoApp")
   head
     title= title
     meta(charset="utf-8")
@@ -13,6 +13,8 @@ html(ng-app)
     link(rel='stylesheet', href='vendor/bootstrap/dist/css/sign.css')
 
     script(src="vendor/angular/angular.min.js")
+
+    script(src="/javascripts/todo.js")
     
   body
     block content
